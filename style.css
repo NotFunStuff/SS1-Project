@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    background-color: gray;
+}
+
+.b {
+    background-color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.steel {
+    color: silver;
+}
+
+.bug {
+    color: darkolivegreen;
+}
+
+.male {
+    color: cyan;
+}
+
+.female {
+    color: palevioletred;
+}
+
+td {
+    /* padding-left: 20px; */
+    padding-right: 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+.ability {
+    text-decoration: underline;
+}
+
+footer{
+    margin-bottom: 20px;
+    size: inherit;
+}
+

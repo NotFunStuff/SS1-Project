@@ -1,0 +1,133 @@
+<~header.html~>
+
+        <!-- <div class="breadcrumbs">
+            <div class="breadcrumbs-inner">
+                <div class="row m-0">
+                    <div class="col-sm-4">
+                        <div class="page-header float-left">
+                            <div class="page-title">
+                                <h1>Dashboard</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="page-header float-right">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="#">Table</a></li>
+                                    <li class="active">Data table</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="content">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            {msg}
+                            <div class="card-header">
+                                <strong>Basic Form</strong> Elements
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="/class_edit_{classId}" id="myForm1" method="POST" class="form-horizontal">
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="text-input"
+                                                class=" form-control-label">Class Name</label></div>
+                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="className"
+                                                class="form-control" value=""><small class="form-text text-muted">This is a help
+                                                text</small></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label for="text-input"
+                                                class=" form-control-label">Class Room</label></div>
+                                        <div class="col-12 col-md-9"><input type="text" id="text-input" name="classRoom"
+                                                class="form-control"><small class="form-text text-muted">This is a help
+                                                text</small></div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label class=" form-control-label">Teacher</label>
+                                        </div>
+
+                                        <div class="col-12 col-md-9">
+
+                                            <select class="standardSelect" tabindex="1" name = "teacher">
+                                                {op}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label class=" form-control-label">Time</label></div>
+                                        <div class="col col-md-9">
+                                            <div class="form-check">
+                                                <div class="radio">
+                                                    <label for="radio1" class="form-check-label ">
+                                                        <input type="radio" id="radio1" name="time" value="Morning"
+                                                            class="form-check-input">Morning
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="radio2" class="form-check-label ">
+                                                        <input type="radio" id="radio2" name="time" value="Evening"
+                                                            class="form-check-input">Evening
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3"><label class=" form-control-label">Date</label></div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="date" name="date">
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" id="submitBtn" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> Submit
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm">
+                                    <i class="fa fa-ban"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+        <~footer.html~>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#bootstrap-data-table-export').DataTable();
+        });
+
+        var btn = document.getElementById("submitBtn");
+
+        btn.addEventListener("click", function () {
+            var form = document.getElementById("myForm1");
+            console.log(form)
+            if (form.reportValidity()) {
+                console.log(form)
+                form.submit();
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>
